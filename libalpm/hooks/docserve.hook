@@ -1,0 +1,12 @@
+[Trigger]
+Type = File
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Target = usr/share/doc/*
+
+[Action]
+Description = Updating /usr/share/doc/index.html ...
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/servedoc_update.sh
+

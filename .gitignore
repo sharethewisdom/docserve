@@ -1,0 +1,12 @@
+*
+!.gitignore
+!Makefile
+!docserve.install
+!libalpm
+!libalpm/*
+!libalpm/hooks/docserve.hook
+!libalpm/scripts/docserve_update.sh
+!404.html
+!50x.html
+!nginx
+!nginx/nginx-doc.conf
