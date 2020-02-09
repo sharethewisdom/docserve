@@ -64,6 +64,9 @@ main() {
     font:16pt sans-serif;
     height:100%;background-color:#b0bfc9;
   }
+  body{
+    padding-bottom: 10em;
+  }
   main{
     display:grid;grid-gap:0.2em 0.8em;
     align-items:center;justify-items:stretch;
