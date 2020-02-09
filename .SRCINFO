@@ -1,6 +1,6 @@
 pkgbase = docserve-git
 	pkgdesc = Pacman hook for updating an index.html page with links to /usr/share/doc/**/index.html
-	pkgver = r1.8216070
+	pkgver = r2.c5e4e68
 	pkgrel = 1
 	arch = x86_64
 	license = GPL
