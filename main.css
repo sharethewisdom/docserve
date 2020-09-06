@@ -3,7 +3,6 @@
   --main-fg: hsl(220, 100%, 20%);
   --card-bg: white;
   --card-hl: hsl(40, 100%, 60%);
-  background-color: var(--main-bg);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,24 +11,25 @@
     --main-fg: hsl(220, 50%, 100%);
     --card-bg: black;
     --card-hl: hsl(40, 100%, 60%);
-    background-color: var(--main-bg);
   }
 }
 
-html,body{
-  font:12pt sans-serif;
-  height:100%;
+html,body,h1,pre{
   margin: 0;
-  padding: 0;
+  padding-top: 0;
+}
+body{
+  font: 12pt sans-serif;
   color: var(--main-fg);
   background-color: var(--main-bg);
 }
-body{
-  padding-bottom: 10em;
+h1 {
+  font-size: 120%;
 }
-main{
+
+anchor-group{
   display:grid;
-  grid-gap:0.1em 0.6em;
+  grid-gap: 4px;
   align-items:center;
   justify-items:stretch;
   grid-template-columns:repeat(2,minmax(min-content,auto));
@@ -37,52 +37,58 @@ main{
   width:100%;
 }
 header {
-  width: 100%;
-  height: auto;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  background-color: var(--card-bg);
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
   0 2px 9px 1px rgba(0, 0, 0, 0.12),
   0 4px 2px -2px rgba(0, 0, 0, 0.2);
 }
-header>h1{font-size:120%;}
 a{
   padding:.5em 1em;
   vertical-align:middle;
   text-decoration:none;
-  opacity: 0.7;
+  opacity: 0.8;
   color: var(--card-fg);
   background-color: var(--card-bg);
 }
-a:hover{
+a:focus{
   opacity: 1;
 }
 
 @media only screen and (min-width: 600px){
-  main{
+  anchor-group{
     grid-template-columns:repeat(3,minmax(min-content,auto));
   }
 }
 
-
 @media only screen and (min-width: 700px){
-  main{
+  anchor-group{
     grid-template-columns:repeat(4,minmax(min-content,auto));
   }
 }
 
 @media only screen and (min-width: 800px){
-  main{
+  anchor-group{
     grid-template-columns:repeat(5,minmax(min-content,auto));
   }
 }
 
 @media only screen and (min-width: 900px){
-  main{
+  anchor-group{
     grid-template-columns:repeat(6,minmax(min-content,auto));
   }
 }
 
 @media only screen and (min-width: 1000px){
-  main{
+  anchor-group{
     grid-template-columns:repeat(7,minmax(min-content,auto));
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  anchor-group{
+    grid-gap: 6px;
+    grid-template-columns:repeat(8,minmax(min-content,auto));
   }
 }

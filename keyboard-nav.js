@@ -28,7 +28,9 @@
       let parent = this.parentElement;
       let focus = document.getSelection().focusNode;
       let direction = "";
-      let columns = window.matchMedia('(min-width: 1000px)').matches ? 7 :
+      let columns =
+        window.matchMedia('(min-width: 1200px)').matches ? 8 :
+        window.matchMedia('(min-width: 1000px)').matches ? 7 :
         window.matchMedia('(min-width: 900px)').matches ? 6 :
         window.matchMedia('(min-width: 800px)').matches ? 5 :
         window.matchMedia('(min-width: 700px)').matches ? 4 :
