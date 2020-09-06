@@ -1,17 +1,16 @@
 # Maintainer: Bart De Roy <de.roy.bart@gmail.com>
 pkgname=docserve-git
-pkgver=r2.c5e4e68
+pkgver=r3.b2aa61d
 pkgrel=1
 pkgdesc="Pacman hook for updating an index.html page with links to /usr/share/doc/**/index.html"
 arch=('x86_64')
-# url="https://github.com/sharethewisdom/${pkgname%-git}"
 license=('GPL')
 depends=('pacman')
-# 'swaylock-blur-multimonitor-git' 
 makedepends=('git')
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
-source=("git+file:///home/bart/repos/PKGBUILDS/${pkgname%-git}")
+# url="https://github.com/sharethewisdom/${pkgname%-git}"
+source=("git+file:///home/bart/write/devel/PKGBUILDS/${pkgname%-git}")
 md5sums=('SKIP')
 
 pkgver() {

@@ -4,6 +4,8 @@
 !PKGBUILD
 !Makefile
 !docserve.install
+!main.css
+!keyboard-nav.js
 !libalpm
 !libalpm/*
 !libalpm/hooks/docserve.hook
