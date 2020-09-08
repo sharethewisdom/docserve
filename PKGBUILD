@@ -24,6 +24,7 @@ package() {
 }
 
 post_install(){
+  /usr/share/libalpm/scripts/docserve_update.sh
 cat <<'EOF'
 Please configure nginx (see /usr/share/docserve/docserve.conf).
 EOF

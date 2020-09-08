@@ -10,7 +10,7 @@ cat <<EOF
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="docserve/main.css">
-  <script src="docserve/keyboard-nav.js"></script>
+  <script src="docserve/keynav.js"></script>
 </head>
 <body>
   <header>
@@ -22,7 +22,8 @@ EOF
 
 files=( $(find $root/doc -mindepth 2 -maxdepth 2 -type f -name index.html|sort) )
 for file in ${files[@]#$root/}; do
-  printf '       <a href="%s">%s</a>\n' $file ${${file#doc/}%%/*}
+  name=${file#doc/}
+  printf '       <a href="%s">%s</a>\n' $file ${name%%/*}
 done
   1>&2 echo ---------
 files=( $(find $root -mindepth 2 -maxdepth 2 -type d -name doc -exec find '{}' -maxdepth 1 -type f -name '*.html' \;) )
