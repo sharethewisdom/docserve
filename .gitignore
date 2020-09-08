@@ -1,6 +1,7 @@
 *
 !.gitignore
 !PKGBUILD
+!README.md
 !Makefile
 !docserve.gif
 !docserve
