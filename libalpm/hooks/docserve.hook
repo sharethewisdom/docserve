@@ -1,12 +1,13 @@
 [Trigger]
-Type = File
+Type = Path
 Operation = Install
 Operation = Upgrade
 Operation = Remove
 Target = usr/share/doc/*
+Target = usr/share/**/doc/*
 
 [Action]
-Description = Updating /usr/share/doc/index.html ...
+Description = Updating /usr/share/index.html ...
 When = PostTransaction
 Exec = /usr/share/libalpm/scripts/docserve_update.sh
 

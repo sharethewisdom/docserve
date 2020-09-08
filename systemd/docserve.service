@@ -1,0 +1,20 @@
+# /usr/lib/systemd/system/docserve.service
+[Unit]
+Description=serving documentation
+After=syslog.target network.target network-online.target nss-lookup.target
+ConditionPathExists=/etc/nginx/docserve.conf
+
+[Service]
+Type=forking
+MemoryDenyWriteExecute=yes
+PrivateDevices=yes
+PIDFile=/run/docserve.pid
+StandardError=journal
+StandardOutput=journal
+ExecStartPre=/usr/bin/nginx -c /etc/nginx/docserve.conf -t 
+ExecStart=/usr/bin/nginx    -c /etc/nginx/docserve.conf
+ExecReload=/usr/bin/nginx   -c /etc/nginx/docserve.conf -s reload
+ExecStop=/usr/bin/nginx     -c /etc/nginx/docserve.conf -s stop
+
+[Install]
+WantedBy=multi-user.target

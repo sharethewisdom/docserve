@@ -14,6 +14,7 @@
     }
     connectedCallback() {
       this.anchors = Array.from(this.querySelectorAll('a'));
+      console.log(this.anchors);
       if (this.hasAttribute('selected')) {
         let selected = this.getAttribute('selected');
         this._selected = parseInt(selected);

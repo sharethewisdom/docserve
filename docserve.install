@@ -1,5 +1,0 @@
-post_install(){
-cat <<'EOF'
-Please configure nginx (see /usr/share/doc/docserve/nginx-doc.conf).
-EOF
-}
